@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #8EC5FC;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%),
+    radial-gradient(at top center, rgba(255, 255, 255, 0.40) 0%, rgba(0, 0, 0, 0.40) 120%) #989898;
+}
+
+form, .alert {
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 4%;
+    width: 40%;
+    background: rgba(100, 46, 46, 0.1);
+    text-align: center;
+}
+
+.alert {
+    padding: 1%;
+    margin: 30px auto;
+}
+
+form legend {
+    text-align: center;
+    padding: 2%;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+form fieldset {
+    border: 1px solid black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+input {
+    display: block;
+    margin: 10px auto;
+}
+
+.input {
+    margin: 10px auto;
+    width: 50%;
+    background: rgba(200, 92, 92, 0.1);
+    border: 1px solid black;
+    border-radius: 20px;
+    height: 25px;
+    padding: 3%;
+}
+
+.input:active, .input:focus {
+    background: rgba(200, 92, 92, 0.1);
+}
+
+.button {
+    display: block;
+    margin: 30px auto 15px auto;
+    width: 150px;
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background: rgba(100, 46, 46, 0.4);
+    cursor: pointer;
+    text-align: center;
+    line-height: 32px;
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: black;
+}

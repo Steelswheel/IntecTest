@@ -1,5 +1,6 @@
 ﻿id;name;name_trans;price;small_text;big_text
-1;Молоко;Milk;12;Молоко;Молоко
-2;Хлеб;Bread;13;Хлеб;Хлеб
-3;Колбаса;Sausage;14;Колбаса;Колбаса
-;Пиво;Beer;25;Пиво шикарно. Пиво шикарно. Пиво шикарно. Пиво шикарно. Пиво шикарно. Пиво шикарно. Пиво шикарно. Пиво шикарно. Пиво шикарно. Пиво шикарно. Пиво шикарно. ;Пиво шикарно. Пиво шикарно. Пиво шикарно. Пиво шикарно. Пиво шикарно. Пиво шикарно. Пиво шикарно. Пиво шикарно. Пиво шикарно. Пиво шикарно. Пиво шикарно. 
+1;Пиво;Beer;11;Cool beer. Cool beer. Cool beer. Cool beer. Cool beer. Cool beer. Cool beer. Cool beer. Cool beer. Cool beer.;Cool beer. Cool beer. Cool beer. Cool beer. Cool beer. Cool beer. Cool beer. Cool beer. Cool beer. Cool beer.
+2;Хлеб;Bread;12;;Crispy bread. Crispy bread. Crispy bread. Crispy bread. Crispy bread. Crispy bread. Crispy bread. Crispy bread. 
+3;Молоко;Milk;13;;Taste milk. Taste milk. Taste milk. Taste milk. Taste milk. Taste milk. Taste milk. Taste milk. Taste milk. Taste milk. 
+4;Колбаса;Sausage;15;;<div>Вареная колбаса.
+5;Сыр;Cheese;10;Cheesee cheese.;Обычный сыр.

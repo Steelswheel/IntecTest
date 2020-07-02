@@ -1,4 +1,5 @@
 <?php
+/** Абстрактный класс для реализации общего функционала */
 abstract class DbConnect
 {
     protected $server;
@@ -6,6 +7,7 @@ abstract class DbConnect
     protected $password;
     protected $db;
     protected $table;
+    public $alert;
 
     function __construct($server = "localhost", $user = "root", $password = "", $db = "test", $table = "users")
     {

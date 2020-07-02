@@ -8,16 +8,16 @@ require 'scripts/authorization.php';
 	<head>
 		<meta charset="utf-8">
 		<title>Intec test</title>
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-		<form enctype="multipart/form-data" class="form" method="post" action="scripts/redirect.php">
+		<form enctype="multipart/form-data" class="download" method="post" action="scripts/download.php">
 			<fieldset>
-				<div class="label"><label for="inputfile">Выберите файл:</label></div>
-				<input type="file" name="inputfile" placeholder="Файл..." class="inputfile">
+				<legend>Загрузка CSV-файла</legend>
+				<input type="file" name="inputfile" placeholder="Файл...">
 				<button type="submit" name="button" class="button">Импорт</button>
 			</fieldset>
 		</form>
-		<div><a href="<?php echo $_SERVER['PHP_SELF'] . '?do=exit'?>">Выйти</a></div>
+		<a class="button" href="<?php echo $_SERVER['PHP_SELF'] . '?do=exit'?>">Выйти</a>
 	</body>
 </html>
