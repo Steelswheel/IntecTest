@@ -110,27 +110,27 @@ class Reader extends DbConnect
                 $big_text = $key['big_text'];
                 $user_id = (int) $key['user_id'];
 
-                $query = "SELECT id, name FROM $this->table WHERE user_id = $this->sid AND id = ? AND name = ?";//Получаем все товары текущего пользователя по name и id
+                $query = "SELECT id FROM $this->table WHERE user_id = $this->sid AND id = ?";//Получаем все товары текущего пользователя по name и id
                 $stmt = $mysqli->prepare($query);
                 if(!$stmt ) { //если ошибка - убиваем процесс и выводим сообщение об ошибке.
                     die($mysqli->error);
                 }
-                $stmt->bind_param('is', $id, $name);
+                $stmt->bind_param('i', $id);
                 $stmt->execute();
-                $stmt->bind_result($i, $n);
+                $stmt->bind_result($i);
                 if ($stmt->fetch()) {
-                    if ($i == $id && $n == $name) {//если id и имя товара совпали, то обновляем информацию о товаре
+                    if ($i == $id) {//если id товара совпал, то обновляем информацию о товаре
                         $stmt->close();
-                        $query = "UPDATE $this->table SET name_trans = ?, price = ?, small_text = ?, big_text = ? WHERE id = ? AND name = ? AND user_id = $this->sid";
+                        $query = "UPDATE $this->table SET name = ?, name_trans = ?, price = ?, small_text = ?, big_text = ? WHERE id = ? AND user_id = $this->sid";
                         $stmt = $mysqli->prepare($query);
                         if(!$stmt ) {
                             die($mysqli->error);
                         }
-                        $stmt->bind_param('sdssis', $name_trans, $price, $small_text, $big_text, $id, $name);
+                        $stmt->bind_param('ssdssi', $name, $name_trans, $price, $small_text, $big_text, $id);
                         $stmt->execute();
                         $this->upd++;
                     }
-                } else {//если id и имя товара не совпали, то добавляем новый товар
+                } else {//если такого id нет, то добавляем новый товар
                     $stmt->close();
                     $query = "INSERT INTO $this->table VALUES (?, ?, ?, ?, ?, ?, ?)";
                     $stmt = $mysqli->prepare($query);

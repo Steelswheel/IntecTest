@@ -1,6 +1,5 @@
 ﻿id;name;name_trans;price;small_text;big_text
-1;Пиво;Beer;11;Cool beer. Cool beer. Cool beer. Cool beer. Cool beer. Cool beer. Cool beer. Cool beer. Cool beer. Cool beer.;Cool beer. Cool beer. Cool beer. Cool beer. Cool beer. Cool beer. Cool beer. Cool beer. Cool beer. Cool beer.
-2;Хлеб;Bread;12;;Crispy bread. Crispy bread. Crispy bread. Crispy bread. Crispy bread. Crispy bread. Crispy bread. Crispy bread. 
-3;Молоко;Milk;13;;Taste milk. Taste milk. Taste milk. Taste milk. Taste milk. Taste milk. Taste milk. Taste milk. Taste milk. Taste milk. 
-4;Колбаса;Sausage;15;;<div>Вареная колбаса.
-5;Сыр;Cheese;10;Cheesee cheese.;Обычный сыр.
+1;Творог;Curd;10;;Творожок.
+2;Сметана;Sour cream;12;;Какой-то текст.
+3;Кефир;Kefir;13;;Кефир.
+4;Мясо;Meat;16;;<p>Свежее мясо.

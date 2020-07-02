@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Июл 02 2020 г., 18:16
+-- Время создания: Июл 02 2020 г., 19:00
 -- Версия сервера: 10.4.11-MariaDB
 -- Версия PHP: 7.4.2
 
@@ -35,7 +35,7 @@ CREATE TABLE `product` (
   `price` double NOT NULL,
   `small_text` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `big_text` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `user_id` int(10) UNSIGNED NOT NULL
+  `user_id` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -43,15 +43,18 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id`, `name`, `name_trans`, `price`, `small_text`, `big_text`, `user_id`) VALUES
-(1, 'Пиво', 'Beer', 11, 'Cool beer. Cool beer. Cool bee', 'Cool beer. Cool beer. Cool beer. Cool beer. Cool beer. Cool beer. Cool beer. Cool beer. Cool beer. Cool beer.', 1),
-(2, 'Хлеб', 'Bread', 12, 'Crispy bread. Crispy bread. Cr', 'Crispy bread. Crispy bread. Crispy bread. Crispy bread. Crispy bread. Crispy bread. Crispy bread. Crispy bread. ', 1),
-(3, 'Молоко', 'Milk', 13, 'Taste milk. Taste milk. Taste ', 'Taste milk. Taste milk. Taste milk. Taste milk. Taste milk. Taste milk. Taste milk. Taste milk. Taste milk. Taste milk. ', 1),
-(4, 'Колбаса', 'Sausage', 15, 'Вареная колбаса.', '<div>Вареная колбаса.', 1),
-(1, 'Пиво', 'Beer', 11, 'Cool beer. Cool beer. Cool bee', 'Cool beer. Cool beer. Cool beer. Cool beer. Cool beer. Cool beer. Cool beer. Cool beer. Cool beer. Cool beer.', 2),
-(2, 'Хлеб', 'Bread', 12, 'Crispy bread. Crispy bread. Cr', 'Crispy bread. Crispy bread. Crispy bread. Crispy bread. Crispy bread. Crispy bread. Crispy bread. Crispy bread. ', 2),
-(3, 'Молоко', 'Milk', 13, 'Taste milk. Taste milk. Taste ', 'Taste milk. Taste milk. Taste milk. Taste milk. Taste milk. Taste milk. Taste milk. Taste milk. Taste milk. Taste milk. ', 2),
-(4, 'Колбаса', 'Sausage', 15, 'Вареная колбаса.', '<div>Вареная колбаса.', 2),
-(5, 'Сыр', 'Cheese', 10, 'Cheesee cheese.', 'Обычный сыр.', 2);
+(1, 'Пиво', 'Beer', 10.2, 'Cool beer. Cool beer. Cool bee', 'Cool beer. Cool beer. Cool beer. Cool beer. Cool beer. Cool beer. Cool beer. Cool beer. Cool beer. Cool beer.', 1),
+(2, 'Хлеб', 'Bread', 12.1, 'Crispy bread. Crispy bread. Cr', 'Crispy bread. Crispy bread. Crispy bread. Crispy bread. Crispy bread. Crispy bread. Crispy bread. Crispy bread. ', 1),
+(3, 'Сыр', 'Cheese', 17.21, 'Cheesee cheese.', 'Обычный сыр.', 1),
+(4, 'Колбаса', 'Sausage', 16.99, 'Вареная колбаса.', '<div>Вареная колбаса.', 1),
+(1, 'Пиво', 'Beer', 10, 'Cool beer.', 'Cool beer.', 3),
+(2, 'Хлеб', 'Bread', 12, 'Какой-то текст.', 'Какой-то текст.', 3),
+(3, 'Молоко', 'Milk', 13, 'Пейте дети молоко - будете здо', 'Пейте дети молоко - будете здоровы!', 3),
+(4, 'Колбаса', 'Sausage', 16, 'Копченая колбаса.', '<p>Копченая колбаса.', 3),
+(1, 'Творог', 'Curd', 10, 'Творожок.', 'Творожок.', 2),
+(2, 'Сметана', 'Sour cream', 12, 'Какой-то текст.', 'Какой-то текст.', 2),
+(3, 'Кефир', 'Kefir', 13, 'Кефир.', 'Кефир.', 2),
+(4, 'Мясо', 'Meat', 16, 'Свежее мясо.', '<p>Свежее мясо.', 2);
 
 -- --------------------------------------------------------
 
@@ -76,11 +79,6 @@ INSERT INTO `users` (`user_id`, `pass`) VALUES
 --
 -- Индексы сохранённых таблиц
 --
-
---
--- Индексы таблицы `product`
---
-ALTER TABLE `product` ADD FULLTEXT KEY `big_text` (`big_text`);
 
 --
 -- Индексы таблицы `users`
